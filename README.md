@@ -16,13 +16,13 @@ Call the script on the pdb file with ligand PDB code, number of copies desired, 
 This project is intended to easily set up a system for binding molecular dynamics simulations.
 
 It allows to make copies of a specific molecule
-![one ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro1?raw=true)
+![one ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro1.png?raw=true)
 
 And randomly distribute them around the protein of interest
-![several ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro1?raw=true)
+![several ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro2.png?raw=true)
 
 For now for my own usage, I only need the A chain, so I remove the rest, but if you need the whole complexed subunits, you can suppress this line :
 
-"""
+'''python
 pymol.cmd.remove("not chain A")
-"""
+'''
