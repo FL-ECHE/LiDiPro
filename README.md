@@ -13,4 +13,16 @@ You should know the three letter code figuring in the PDB for the ligand of choi
 
 Call the script on the pdb file with ligand PDB code, number of copies desired, range around the protein where the ligands will be distributed, name of the target file where the new complex will be saved, and wether to delete the original ligand (0 for no, 1 for yes).
 
-This intended to easily set up a system for binding molecular dynamics simulations.
+This project is intended to easily set up a system for binding molecular dynamics simulations.
+
+It allows to make copies of a specific molecule
+![one ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro1?raw=true)
+
+And randomly distribute them around the protein of interest
+![several ligand](https://github.com/FL-ECHE/FL-ECHE/blob/main/lidipro1?raw=true)
+
+For now for my own usage, I only need the A chain, so I remove the rest, but if you need the whole complexed subunits, you can suppress this line :
+
+"""
+pymol.cmd.remove("not chain A")
+"""
