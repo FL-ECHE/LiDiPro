@@ -23,6 +23,6 @@ And randomly distribute them around the protein of interest
 
 For now for my own usage, I only need the A chain, so I remove the rest, but if you need the whole complexed subunits, you can suppress this line :
 
-''' python
+```python
 pymol.cmd.remove("not chain A")
-'''
+```
