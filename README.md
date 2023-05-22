@@ -18,6 +18,8 @@ Example to distribute 5 copies of the XYZ ligand around 5 angström of the compl
 ./distribute_ligand.py test.pdb XYZ 5 5 test_5lig.pdb 0 
 ```
 
+## Aim
+
 This project is intended to easily set up a system for binding molecular dynamics simulations.
 
 It allows to make copies of a specific molecule
@@ -26,8 +28,19 @@ It allows to make copies of a specific molecule
 And randomly distribute them around the protein of interest
 ![several ligand](lidipro2.png)
 
-For now for my own usage, I only need the A chain, so I remove the rest, but if you need the whole complexed subunits, you can suppress this line :
+## Remarks
 
+For now for my own usage, I only need the A chain, so I remove the rest, but if you need the whole complexed subunits, you can suppress this line :
 ```python
 pymol.cmd.remove("not chain A")
+```
+
+The same goes for the water, as I solute my system afterwards, the X-ray revealed structure's water molecules are not needed in my case :
+```python
+pymol.cmd.remove("sol.")
+```
+
+This script centers the protein, thus alters atom coordinates, this might hinder some of your applications :
+```python
+pymol.cmd.center("all")
 ```
