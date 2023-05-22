@@ -11,7 +11,12 @@ You should know the three letter code figuring in the PDB for the ligand of choi
 
 ## Use
 
-Call the script on the pdb file with *ligand PDB code*, *number of copies desired*, *range around the protein* where the ligands will be distributed, *name of the target file* where the new complex will be saved, and wether to delete the original ligand *(0 for no, 1 for yes)*.
+Call the script on the ***pdb file*** with ***ligand PDB code***, ***number of copies desired***, ***range around the protein*** where the ligands will be distributed, ***name of the target file*** where the new complex will be saved, and wether to delete the original ligand ***(0 for no, 1 for yes)***.
+
+Example to distribute 5 copies of the XYZ ligand around 5 angström of the complex :
+```bash
+./distribute_ligand.py test.pdb XYZ 5 5 test_5lig.pdb 0 
+```
 
 This project is intended to easily set up a system for binding molecular dynamics simulations.
 
